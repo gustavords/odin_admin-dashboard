@@ -1,37 +1,47 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-flow: column;
     height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
 header {
     background-color: aqua;
-    position: relative;
+    grid-column:2/6 ;
+    grid-row: 1/2;
+    /* position: relative;
     left: 20%;
-    flex: 1;
+    flex: 1; */
 }
 
 nav {
     background-color: yellowgreen;
-    position: absolute;
+    grid-column:1/2 ;
+    grid-row: 1/6;
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-template-rows: repeat(24, 1fr);
+    /* position: absolute;
     top: 0px;
     width: 20%;
     height: 100%;
     display: grid;
     grid-template-rows: repeat(24, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    overflow: auto;
+    overflow: auto; */
 
 }
 
 main {
     background-color: coral;
-    position: relative;
+    grid-column:2/6 ;
+    grid-row: 2/6;
+    /* position: relative;
     left: 20%;
     height: auto;
-    flex: 5;
+    flex: 5; */
 }
 
 /* footer{
