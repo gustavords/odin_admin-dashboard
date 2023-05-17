@@ -21,11 +21,23 @@ header {
     background-color: aqua;
     grid-column: 2/7;
     grid-row: 1/2;
-    /* position: relative;
-    left: 20%;
-    flex: 1; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
+.header-top, #search-input{
+    display: flex;
+}
+
+.header-top > div {
+    margin-right: auto;
+    width: 40%;
+}
+
+#search{
+    /* width: 90%; */
+}
 
 nav {
     background-color: var(--sidebar-bg);
