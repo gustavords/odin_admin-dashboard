@@ -1,7 +1,11 @@
 :root {
     --sidebar-bg: #1992D4;
     --sidebar-text: #FFFFFF;
-    --main-bg: #CCD1D8;
+    --main-bg: #E2E8F0;
+    --header-bg: #FFFFFF;
+    --search-bg:#E2E8F0;
+    --btn-bg: #1992D4;
+    --btn-text: #FFFFFF;
 
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -18,12 +22,14 @@ body {
 }
 
 header {
-    background-color: aqua;
+    background-color: var(--header-bg);
+    box-shadow: 0px 5px 0px 0px rgb(128, 128, 128, .1);
     grid-column: 2/7;
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    position: relative;
 }
 
 .header-top,
@@ -56,6 +62,17 @@ header {
     flex: 1;
 }
 
+.fa-search {
+    height: 85%;
+    width: 85%;
+}
+
+#search {
+    background-color: var(--search-bg);
+    border-radius: .45rem;
+    border: 0;
+}
+
 #user-info {
     justify-content: right;
     flex: 1;
@@ -66,7 +83,6 @@ header {
     height: auto;
     width: 2rem;
 }
-
 
 .profile-info {
     padding-left: 2rem;
@@ -104,11 +120,14 @@ header {
 }
 
 .btn {
+    color: var(--btn-text);
+    background-color: var(--btn-bg);
     border: none;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     width: 100%;
-}
+    border-radius: 3rem;
 
+}
 
 
 nav {
@@ -124,8 +143,6 @@ nav {
     overflow: auto;
 }
 
-
-
 nav>a {
     color: var(--sidebar-text);
     text-decoration: none;
@@ -138,16 +155,14 @@ nav>a {
     font-size: x-large;
 }
 
-
 .icon {
     height: 1rem;
     /* width: 1rem; */
 }
 
 
-
 main {
-    background-color: coral;
+    background-color: var(--main-bg);
     grid-column: 2/7;
     grid-row: 2/6;
 }
