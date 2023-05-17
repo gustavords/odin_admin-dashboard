@@ -23,21 +23,93 @@ header {
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
 }
 
-.header-top, #search-input{
+.header-top,
+#search-input,
+#user-info,
+.header-bottom,
+.profile-info,
+.action-btns {
     display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.header-top > div {
+.header-top {
+    justify-content: space-evenly;
+}
+
+.profile-pic {
+    height: auto;
+    width: 2rem;
+}
+
+#search-input {
+    padding-left: 2rem;
     margin-right: auto;
-    width: 40%;
+    flex: 1.5;
 }
 
-#search{
-    /* width: 90%; */
+#search-input>label+input {
+    flex: 1;
 }
+
+#user-info {
+    justify-content: right;
+    flex: 1;
+    padding-right: 2rem;
+}
+
+#user-info>img {
+    height: auto;
+    width: 2rem;
+}
+
+
+.profile-info {
+    padding-left: 2rem;
+    flex: 2;
+}
+
+.profile-info>.profile-pic {
+    width: 4rem;
+}
+
+.profile-info>div {
+    padding: .5rem;
+}
+
+.profile-info>div>p,
+.profile-info>div>h1 {
+    padding: .25rem;
+    margin: 0;
+}
+
+.profile-info>div>p {
+    position: relative;
+    top: .2rem;
+}
+
+.profile-info>div>h1 {
+    position: relative;
+    top: -.6rem;
+}
+
+.action-btns {
+    padding-right: 2rem;
+    flex: 1;
+
+}
+
+.btn {
+    border: none;
+    padding: 1rem;
+    width: 100%;
+}
+
+
 
 nav {
     background-color: var(--sidebar-bg);
@@ -66,25 +138,7 @@ nav>a {
     font-size: x-large;
 }
 
-/* nav > a > h1 {
-    color: black;
 
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    /* gap: .5rem; 
-    margin-bottom: 1rem;
-    padding:0;
-} */
-
-/* nav > * {
-    border: 1px solid black;
- } */
-
-
-/* nav > img{
-    background-color: blue;
- } */
 .icon {
     height: 1rem;
     /* width: 1rem; */
@@ -96,10 +150,6 @@ main {
     background-color: coral;
     grid-column: 2/7;
     grid-row: 2/6;
-    /* position: relative;
-    left: 20%;
-    height: auto;
-    flex: 5; */
 }
 
 /* footer{
